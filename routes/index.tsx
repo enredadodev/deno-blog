@@ -1,3 +1,4 @@
+import { asset } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { CSS } from "$gfm/mod.ts";
 import { Post, Posts } from "../types.d.ts";
@@ -21,6 +22,7 @@ export default function Home(props: PageProps) {
   return (
     <main class="p-4">
       <h1 class="text-2xl">Mi blog</h1>
+      <img src={asset("/Apple_logo_240.png")} />
       <style dangerouslySetInnerHTML={{ __html: CSS }}></style>
       {posts.map((post: Post) =>
         post
